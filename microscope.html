@@ -1,14 +1,737 @@
 <head>
-  <title>microscope</title>
+	<title>microscope</title>
+	<link href='http://glassdoor.com/static/css/flex/gd-core.css' rel='stylesheet' type='text/css' media='all'/>
+	<link href='http://glassdoor.com/static/css/gd-static-list.css' rel='stylesheet' type='text/css' media='all'/>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+<div id="FlexTestFF">
+	<div class="testMQ mqHH"></div>
+	<div class="testMQ mqTab"></div>
+	<div class="testMQ mqDT"></div>
+</div>
+<div id="PageTopPlaceholder" class=""></div>
+<header id="PageTop" class="gradient">
+	<nav>
+		<div class="tbl mobile">
+			<div class="row">
+				<div class="cell left"><span class="mainMenu menuLink icon"> <i
+						class="mainMenu"><span>Site Menu</span></i> </span> <i class="vert-hlpr"></i></div>
+				<div class="cell center " style="width:99.9%"><a href="/index.htm" target="_top" tabindex="-1"
+																 class="logo"><i
+						class="logo"><span>Home</span></i><i class="vert-hlpr"></i></a></div>
+				<div class="cell right"><span class="acctMenu menuLink icon showHH"> <i class="acctMenu"><span>My Account</span></i> </span>
+					<i class="vert-hlpr"></i></div>
+			</div>
+		</div>
+		<div class="tbl search">
+			<div class="row">
+				<div class="cell hideHH"><a href="/index.htm" target="_top" tabindex="-1" class="logo"><i
+						class="logo"><span>Home</span></i><i class="vert-hlpr"></i></a></div>
+				<div class="cell hideHH">
+					<ul class="headerMenu">
+						<li class="jobs tab gradient"><a href="/Jobs/jobs.htm" class="gradient" target="_top"
+														 data-search-url="/Job/jobs.htm"><span>Jobs</span><i
+								class="vert-hlpr"></i></a></li>
+						<li class="reviews tab gradient"><a href="/Reviews/index.htm" class="gradient" target="_top"
+															data-search-url="/GD/Reviews/company-reviews.htm"><span
+								class="hideTab">Companies &amp; Reviews</span><span class="showTab">Companies</span><i
+								class="vert-hlpr"></i></a></li>
+						<li class="salaries tab gradient"><a href="/Salaries/index.htm" class="gradient"
+															 target="_top"
+															 data-search-url="/GD/Salaries/company-salaries.htm"><span>Salaries</span><i
+								class="vert-hlpr"></i></a></li>
+						<li class="interviews tab gradient"><a href="/Interview/index.htm" class="gradient"
+															   target="_top"
+															   data-search-url="/GD/Interview/job-interview-questions.htm"><span>Interviews</span><i
+								class="vert-hlpr"></i></a></li>
+					</ul>
+				</div>
+				<div class="cell" style="width:99.9%;position:relative;vertical-align: middle;">
+					<div id="SiteSrchTop" class="search-container cf">
+						<form action="/Job/jobs.htm" method="get" target="_top" class="siteSrchForm ready"
+							  data-allow-postal-codes="true" data-pick-best-match="true"><input type="hidden"
+																								name="suggestCount"
+																								class="suggestCount"
+																								value="0"> <input
+								type="hidden" name="suggestChosen" class="suggestChosen" value="false"> <input
+								type="hidden" name="clickSource" value="searchBtn"> <input type="hidden"
+																						   name="typedKeyword"
+																						   class="typedKey"
+																						   value=""> <select
+								id="SrchSelectTop" class="url gradient hidden" style="display:none;">
+							<option value="/Job/jobs.htm" selected="selected"
+									data-placeholder="Job Title, Keywords, or Company" data-zipcodes-ok="true"
+									data-subtitle=""> Jobs
+							</option>
+							<option value="/GD/Reviews/company-reviews.htm" data-placeholder="Company Name"
+									data-zipcodes-ok="false" data-subtitle=""> Companies
+							</option>
+							<option value="/GD/Salaries/company-salaries.htm"
+									data-placeholder="Job Title or Company" data-zipcodes-ok="false"
+									data-subtitle=""> Salaries
+							</option>
+							<option value="/GD/Interview/job-interview-questions.htm"
+									data-placeholder="Job Title or Company" data-zipcodes-ok="false"
+									data-subtitle=""> Interviews
+							</option>
+						</select>
 
-  {{> hello}}
+							<div class="tbl">
+								<div class="row">
+									<div class="cell"><i class="close"></i></div>
+									<div class="cell" style="width: 99.9%;position:relative;"><i
+											class="srch-green"></i> <input type="text"
+																		   class="std keyword med gradient ui-autocomplete-input glassdoorAC"
+																		   name="sc.keyword" value=""
+																		   placeholder="Search..."
+																		   data-auto-complete="true"
+																		   autocomplete="off"><span role="status"
+																									aria-live="polite"
+																									class="ui-helper-hidden-accessible"></span>
+										<input type="text" value="" data-srch-type="popular"
+											   class="std loc med gradient ui-autocomplete-input glassdoorAC"
+											   placeholder="City, State, or Zip" autocomplete="off"><span
+												role="status" aria-live="polite"
+												class="ui-helper-hidden-accessible"></span> <input type="hidden"
+																								   class="locType"
+																								   name="locT"
+																								   value=""> <input
+												type="hidden" class="locId" name="locId" value="">
+										<button type="submit" data-btn-id=""
+												class="searchSubmit tight gd-btn gd-btn-submit gd-btn-2 gd-btn-med gd-btn-icon gradient">
+											<i class="btn-search-blue"></i><i class="hlpr"></i></button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="cell hideHH">
+					<div class="actions"><i class="vert-hlpr"></i> <span
+							class="employers menuLink"> Employers </span> <span class="account menuLink"> <i
+							class="profile"></i> <span>Me</span> </span> <a
+							href="/survey/start_input.htm?contentOriginHook=PAGE_HEADER_NAV"
+							class="gd-btn gd-btn-link gradient gd-btn-1 gd-btn-med gd-btn-icon btn-plus tight hideHH"><i
+							class="btn-plus"><span>Write a Review</span></i><span></span><i class="hlpr"></i> </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div id="EmployersMenu" class="hdrDropdown selectboxit-container"
+		 style="top: 33px; left: 1025.41796875px; right: auto;">
+		<ul class="selectboxit-options selectboxit-list hidden" tabindex="-1">
+			<li class="selectboxit-option" role="option"><a href="/partners/index.htm" rel="nofollow"
+															class="selectboxit-option-anchor" target="_blank"
+															data-ga-lbl="go-emp-center"> Go to Employer Center </a>
+			</li>
+			<li class="selectboxit-option" role="option"><a href="/partners/post-a-job/index.htm?src=site-header"
+															class="selectboxit-option-anchor" target="_blank"
+															data-ga-lbl="post-a-job"> Post a Job </a></li>
+			<li class="selectboxit-option" role="option"><a href="http://employers.glassdoor.com"
+															class="selectboxit-option-anchor SL_norewrite"
+															target="_blank" data-ga-lbl="talent-solutions">
+				Solutions for Employers </a></li>
+			<li class="selectboxit-option" role="option"><a href="http://employers.glassdoor.com/employer-branding"
+															class="selectboxit-option-anchor SL_norewrite"
+															target="_blank" data-ga-lbl="employer-blog"> Employer
+				Branding </a></li>
+			<li class="selectboxit-option" role="option"><a href="http://employers.glassdoor.com/blog"
+															class="selectboxit-option-anchor SL_norewrite"
+															target="_blank" data-ga-lbl="employer-blog"> Recruiting
+				Blog </a></li>
+			<li class="selectboxit-option" role="option"><a href="/partners/search/insights/index.htm"
+															rel="nofollow" class="selectboxit-option-anchor"
+															target="_blank" data-ga-lbl="go-insights-pro"> Go to
+				Company Insights </a></li>
+		</ul>
+	</div>
+	<div id="AccountMenu" class="hdrDropdown selectboxit-container"
+		 style="top: 33px; left: 1117.77600097656px; right: auto;">
+		<ul class="selectboxit-options selectboxit-list hidden true" tabindex="-1"
+			style="min-width: 32px; left: -1px;">
+			<li class="selectboxit-option" role="option"><tt class="SL_norewrite"> <a
+					href="/member/account/savedJobs_input.htm" rel="nofollow" class="selectboxit-option-anchor"
+					data-ga-lbl="saved-jobs">Saved Jobs</a> </tt></li>
+			<li class="selectboxit-option" role="option"><tt class="SL_norewrite"> <a
+					href="/member/account/jobAlerts_input.htm" rel="nofollow" class="selectboxit-option-anchor"
+					data-ga-lbl="job-alerts">Job Alerts</a> </tt></li>
+			<li class="selectboxit-option" role="option"><tt class="SL_norewrite"> <a
+					href="/member/account/followedCompanies_input.htm" rel="nofollow"
+					class="selectboxit-option-anchor" data-ga-lbl="company-follow">Company Follows</a> </tt></li>
+			<li class="selectboxit-option" role="option"><tt class="SL_norewrite"> <a
+					href="/member/account/salaries_input.htm" rel="nofollow" class="selectboxit-option-anchor"
+					data-ga-lbl="contributions">Contributions</a> </tt></li>
+			<li class="selectboxit-option" role="option"><tt class="SL_norewrite"> <a
+					href="/member/account/settings_input.htm" rel="nofollow" class="selectboxit-option-anchor"
+					data-ga-lbl="account-settings">Account Settings</a> </tt></li>
+			<li class="selectboxit-option logoutOption" role="option"><tt class="SL_norewrite"> <a
+					href="/logout.htm" target="_top" rel="nofollow" class="selectboxit-option-anchor"
+					data-ga-lbl="sign-out">Sign Out</a> </tt></li>
+			<li data-disabled="true" class="selectboxit-option" role="option">
+				<div class="hr">
+					<hr>
+				</div>
+			</li>
+			<li class="selectboxit-option admin"><a href="/admin/index.htm" target="_top" rel="nofollow"
+													class="selectboxit-option-anchor">Admin</a></li>
+			<li class="selectboxit-option admin"><a href="/ux/index.htm" target="_top" rel="nofollow"
+													class="selectboxit-option-anchor">UX Guide</a></li>
+			<li class="selectboxit-option admin"><a class="toggleDetails view selectboxit-option-anchor"
+													data-user-id="18981686">Show Jobs Details</a></li>
+		</ul>
+	</div>
+	<div id="AdminMenu" class="hdrDropdown selectboxit-container">
+		<ul class="selectboxit-options selectboxit-list hidden" tabindex="-1">
+			<li class="selectboxit-option admin"><a href="/admin/index.htm" target="_top" rel="nofollow"
+													class="selectboxit-option-anchor">Admin</a></li>
+		</ul>
+	</div>
+</header>
+
+<script>
+	$(document).keyup(function (e) {
+		if (e.keyCode == 27) { //Escape key
+			GD.userAlert.closePopup();
+		}
+	});
+</script>
+
+<div id="UserAlertBarSubstitute"></div>
+<div class="pageContentWrapper ">
+<div id="PageContent">
+<div id="PageBodyContents" class="meat">
+<div class="pageInsideContent cf">
+<div id="Lists">
+<div id="Oddball">
+<div class="flex-aside">
+<article id="MainCol">
+{{> myList}}
+<div id="SocialSharingBtns" class="floating hidden loaded"
+	 style="opacity: 1; display: block;">
+	<div class="contents">
+		<div class="twitterFacade facade"></div>
+		<div class="fbLikeFacade facade"></div>
+		<div class="linkedInFacade facade"></div>
+		<div class="gPlusFacade facade"></div>
+		<div class="twitterButton">
+			<iframe id="twitter-widget-0" scrolling="no" frameborder="0"
+					allowtransparency="true"
+					src="http://platform.twitter.com/widgets/tweet_button.d4db41a5a14a4516e6d4ecf6250c7419.en.html#_=1414010931949&amp;count=horizontal&amp;dnt=true&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Flocalhost%3A8080%2FTop-25-Oddball-Interview-Questions-LST_KQ0%2C34.htm&amp;size=m&amp;text=Top%2025%20Oddball%20Interview%20Questions%20%7C%20Glassdoor&amp;url=http%3A%2F%2Flocalhost%3A8080%2FTop-25-Oddball-Interview-Questions-LST_KQ0%2C34.htm"
+					class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal"
+					title="Twitter Tweet Button" data-twttr-rendered="true"
+					style="width: 109px; height: 20px;"></iframe>
+		</div>
+		<div class="fbLikeButton">
+			<fb:like href="" layout="button_count" show_faces="false" font="arial"
+					 data-share="false" send="true" class=" fb_iframe_widget"
+					 fb-xfbml-state="rendered"
+					 fb-iframe-plugin-query="app_id=159934710737737&amp;font=arial&amp;href=http%3A%2F%2Flocalhost%3A8080%2FTop-25-Oddball-Interview-Questions-LST_KQ0%2C34.htm&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;send=true&amp;share=false&amp;show_faces=false">
+													<span style="vertical-align: bottom; width: 77px; height: 20px;"><iframe
+															name="f3802589e" width="1000px" height="1000px"
+															frameborder="0" allowtransparency="true" scrolling="no"
+															title="fb:like Facebook Social Plugin"
+															src="http://www.facebook.com/plugins/like.php?app_id=159934710737737&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2F2_ZudbRXWRs.js%3Fversion%3D41%23cb%3Df109d4b0d%26domain%3Dlocalhost%26origin%3Dhttp%253A%252F%252Flocalhost%253A8080%252Ff2b42c1a0%26relation%3Dparent.parent&amp;font=arial&amp;href=http%3A%2F%2Flocalhost%3A8080%2FTop-25-Oddball-Interview-Questions-LST_KQ0%2C34.htm&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;send=true&amp;share=false&amp;show_faces=false"
+															style="border: none; visibility: visible; width: 77px; height: 20px;"
+															class=""></iframe></span></fb:like>
+		</div>
+		<div class="linkedInButton"><span class="IN-widget"
+										  style="line-height: 1; vertical-align: baseline; display: inline-block; text-align: center;"><span
+				style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span
+				id="li_ui_li_gen_1414010932138_0"><a
+				id="li_ui_li_gen_1414010932138_0-link"
+				href="javascript:void(0);"><span
+				id="li_ui_li_gen_1414010932138_0-logo">in</span><span
+				id="li_ui_li_gen_1414010932138_0-title"><span
+				id="li_ui_li_gen_1414010932138_0-mark"></span><span
+				id="li_ui_li_gen_1414010932138_0-title-text">Share</span></span></a></span></span><span
+				style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span
+				id="li_ui_li_gen_1414010932146_1-container"
+				class="IN-right IN-hidden"><span id="li_ui_li_gen_1414010932146_1"
+												 class="IN-right"><span
+				id="li_ui_li_gen_1414010932146_1-inner" class="IN-right"><span
+				id="li_ui_li_gen_1414010932146_1-content" class="IN-right">0</span></span></span></span></span></span>
+			<script type="IN/Share+init" data-counter="right" data-url=""
+					data-onsuccess="linkedInCallbackGA"></script>
+		</div>
+		<div class="gPlusButton">
+			<div id="___plusone_0"
+				 style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 106px; height: 24px; background: transparent;">
+				<iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0"
+						scrolling="no"
+						style="position: static; top: 0px; width: 106px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;"
+						tabindex="0" vspace="0" width="100%" id="I0_1414010931916"
+						name="I0_1414010931916"
+						src="https://apis.google.com/u/0/se/0/_/+1/fastbutton?usegapi=1&amp;size=standard&amp;gpluscallbackga=&amp;origin=http%3A%2F%2Flocalhost%3A8080&amp;url=http%3A%2F%2Flocalhost%3A8080%2FTop-25-Oddball-Interview-Questions-LST_KQ0%2C34.htm&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en.dXaY4wFPegI.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Ft%3Dzcms%2Frs%3DAGLTcCORdZkJIIQQ1zpx2loGrb-KTPf3oA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I0_1414010931916&amp;parent=http%3A%2F%2Flocalhost%3A8080&amp;pfname=&amp;rpctoken=73083561"
+						data-gapiattached="true" title="+1"></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="module">
+<div class="statLstHdr section cf">
+	<div class="hdr">
+		<div class="content"><h1 class="strong"> My List</h1></div>
+		<div class="spacer"><i></i></div>
+	</div>
+</div>
+
+{{> postsList}}
+</div>
+</article>
+<aside>
+	<div class="bucket workInHRFOrEmployerInfo"><h2 class="bucketTitle"> Work in
+		HR? </h2>
+
+		<div class="bucketBody cf"><p class="tightTop"> See who's viewing your company's
+			profile and get started managing your brand on Glassdoor. Sign up for a <a
+					href="http://www.glassdoor.com/partners/account/create.htm?Source=GDList_campaign"
+					target="_blank">free employer account</a>. </p></div>
+	</div>
+</aside>
+</div>
+</div>
+</div>
+<script>
+	GD.runAfterLoad(function () {
+		GD.staticList.initOddball();
+	});
+</script>
+</div>
+<div id="InterstitialDisplay" class="hidden interstitial"><i class="spinner"></i>
+
+	<p class="message">Loading…</p></div>
+</div>
+</div>
+</div>
+<footer id="PageBot" data-role="footer">
+	<div class="contents">
+		<div class="hr hideDesk">
+			<hr>
+		</div>
+		<div id="EmpSolutionsTab"><a href="http://employers.glassdoor.com" class="SL_norewrite notranslate"
+									 rel="nofollow"> <span><tt class="notranslate">Work in HR or
+			Recruiting?</tt></span> </a></div>
+		<div class="flex-aside ">
+			<div class="col span-1-1"><p class="footerText tightVert minor"> Glassdoor is your free inside look at
+				jobs and companies. Salary details, company reviews, and interview questions — all posted
+				anonymously by employees and job seekers. </p></div>
+		</div>
+		<div class="hr">
+			<hr>
+		</div>
+		<nav>
+			<ul class="flex-grid">
+				<li class="span-1-3 col">
+					<ul class="flex-grid noFold">
+						<li class="span-1-2 col"><p>Glassdoor</p>
+							<ul>
+								<li><a href="/about/index_input.htm" target="_top" rel="nofollow">About Us</a></li>
+								<li class="SL_norewrite"><a href="http://jobs.glassdoor.com/home?id=GLASA001M"
+															target="_top" rel="nofollow">Careers</a></li>
+								<li class="SL_norewrite"><a href="http://www.glassdoor.com/blog/"
+															target="_top">Blog</a></li>
+								<li><a href="/about/contact_input.htm" target="_top" rel="nofollow">Feedback</a>
+								</li>
+							</ul>
+						</li>
+						<li class="span-1-2 col"><p>Employers</p>
+							<ul>
+								<li><a href="http://employers.glassdoor.com?src=gdfoot" target="_top"
+									   rel="nofollow">Talent Solutions</a></li>
+								<li><a href="/partners/index.htm" target="_top" rel="nofollow">Employer Center</a>
+								</li>
+								<li><a href="/partners/post-a-job/index.htm?src=site-footer" target="_top"
+									   rel="nofollow">Post a Job</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="span-1-3 col">
+					<ul class="flex-grid noFold">
+						<li class="span-1-2 col"><p>Community</p>
+							<ul>
+								<li><a href="/about/faq.htm" target="_top" rel="nofollow">Help / FAQ</a></li>
+								<li><a href="/about/guidelines.htm" target="_top" rel="nofollow">Guidelines</a></li>
+								<li><a href="/about/privacy.htm" target="_top" rel="nofollow">Privacy &amp;
+									Cookies</a></li>
+								<li><a href="/about/terms.htm" target="_top" rel="nofollow">Terms of Use</a></li>
+							</ul>
+						</li>
+						<li class="span-1-2 col"><p>Work With Us</p>
+							<ul>
+								<li><a href="/partners/jobs/dailyReport.htm" target="_top" rel="nofollow">Job
+									Boards</a></li>
+								<li><a href="/about/contact_input.htm?opt=a" target="_top"
+									   rel="nofollow">Advertisers</a>
+								</li>
+								<li><a href="/api/index.htm" target="_top" rel="nofollow">Developers</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="span-1-3 col tldSelector">
+					<ul class="flex-grid noFold last">
+						<li class="span-1-1 col"><select name="tldSwitcher" id="TldSwitcher"
+														 style="display: none; z-index: 10;">
+							<option value="www-qa.glassdoor.com.au">Australia</option>
+							<option value="www-qa.br.glassdoor.com">Brazil</option>
+							<option value="www-qa.glassdoor.ca">Canada</option>
+							<option value="www-qa.glassdoor.co.in">India</option>
+							<option value="www-qa.glassdoor.es">Spain</option>
+							<option value="www-qa.glassdoor.co.uk">United Kingdom</option>
+							<option value="www-qa.glassdoor.com" selected="">United States</option>
+						</select><span id="TldSwitcherSelectBoxItContainer" class="selectboxit-container"><span
+								id="TldSwitcherSelectBoxIt" class="selectboxit  selectboxit-enabled selectboxit-btn"
+								name="tldSwitcher" tabindex="0" unselectable="on" role="combobox"
+								aria-autocomplete="list" aria-expanded="false"
+								aria-owns="TldSwitcherSelectBoxItOptions" aria-activedescendant="6" aria-label=""
+								aria-live="assertive"><span class="selectboxit-option-icon-container"><i
+								id="TldSwitcherSelectBoxItDefaultIcon"
+								class="selectboxit-default-icon selectboxit-option-icon selectboxit-container"
+								unselectable="on"></i></span><span id="TldSwitcherSelectBoxItText"
+																   class="selectboxit-text" unselectable="on"
+																   data-val="www-qa.glassdoor.com"
+																   style="max-width: 230px;">United States</span><span
+								id="TldSwitcherSelectBoxItArrowContainer" class="selectboxit-arrow-container"
+								unselectable="on"><i id="TldSwitcherSelectBoxItArrow"
+													 class="selectboxit-arrow selectboxit-default-arrow"
+													 unselectable="on"></i></span></span><ul
+								id="TldSwitcherSelectBoxItOptions" class="selectboxit-options selectboxit-list"
+								tabindex="-1" role="listbox" aria-hidden="true">
+							<li id="0" data-val="www-qa.glassdoor.com.au" data-disabled="false"
+								class="selectboxit-option  selectboxit-option-first" role="option"><a
+									class="selectboxit-option-anchor"><span
+									class="selectboxit-option-icon-container"><i
+									class="selectboxit-option-icon  selectboxit-container"></i></span>Australia</a>
+							</li>
+							<li id="1" data-val="www-qa.br.glassdoor.com" data-disabled="false"
+								class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span
+									class="selectboxit-option-icon-container"><i
+									class="selectboxit-option-icon  selectboxit-container"></i></span>Brazil</a>
+							</li>
+							<li id="2" data-val="www-qa.glassdoor.ca" data-disabled="false"
+								class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span
+									class="selectboxit-option-icon-container"><i
+									class="selectboxit-option-icon  selectboxit-container"></i></span>Canada</a>
+							</li>
+							<li id="3" data-val="www-qa.glassdoor.co.in" data-disabled="false"
+								class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span
+									class="selectboxit-option-icon-container"><i
+									class="selectboxit-option-icon  selectboxit-container"></i></span>India</a></li>
+							<li id="4" data-val="www-qa.glassdoor.es" data-disabled="false"
+								class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span
+									class="selectboxit-option-icon-container"><i
+									class="selectboxit-option-icon  selectboxit-container"></i></span>Spain</a></li>
+							<li id="5" data-val="www-qa.glassdoor.co.uk" data-disabled="false"
+								class="selectboxit-option" role="option"><a class="selectboxit-option-anchor"><span
+									class="selectboxit-option-icon-container"><i
+									class="selectboxit-option-icon  selectboxit-container"></i></span>United Kingdom</a>
+							</li>
+							<li id="6" data-val="www-qa.glassdoor.com" data-disabled="false"
+								class="selectboxit-option  selectboxit-option-last selectboxit-selected"
+								role="option"><a class="selectboxit-option-anchor"><span
+									class="selectboxit-option-icon-container"><i
+									class="selectboxit-option-icon  selectboxit-container"></i></span>United States</a>
+							</li>
+						</ul></span>
+
+							<div class="appStoreCTA notranslate noWrap"><a class="app-store ios"
+																		   href="https://itunes.apple.com/us/app/glassdoor-job-search-salaries/id589698942?mt=8&amp;uo=4"
+																		   target="_blank"> <i><span>Available on the App Store</span></i>
+							</a> <a class="app-store android"
+									href="https://play.google.com/store/apps/details?id=com.glassdoor.app"
+									target="_blank"> <i><span>Android App available on Google Play</span></i> </a>
+							</div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<div class="hr">
+			<hr>
+		</div>
+		<div class="browseLinks">
+			<ul class="linkList">
+				<li class="newLine"><a href="/site-directory/job-salaries.htm" target="_top" data-ajax="false"
+									   class="minor">Salaries by Job</a></li>
+				<li><a href="/site-directory/company-salaries.htm" target="_top" data-ajax="false" class="minor">Salaries
+					by Company</a></li>
+				<li class="endLine"><a href="/site-directory/city-salaries.htm" target="_top" data-ajax="false"
+									   class="minor">Salaries by City</a></li>
+				<li class="newLine"><a href="/site-directory/company-reviews.htm" target="_top" data-ajax="false"
+									   class="minor">Reviews by Company</a></li>
+				<li class="endLine"><a href="/site-directory/job-interviews.htm" target="_top" data-ajax="false"
+									   class="minor">Interview Questions by Job</a></li>
+				<li class="newLine endLine"><a href="/site-directory/company-interviews.htm" target="_top"
+											   data-ajax="false" class="minor">Interviews by Company</a></li>
+				<li class="newLine"><a href="/site-directory/title-jobs.htm" target="_top" data-ajax="false"
+									   class="minor">Jobs by Title</a></li>
+				<li><a href="/site-directory/company-jobs.htm" target="_top" data-ajax="false" class="minor">Jobs by
+					Company</a></li>
+				<li class="endLine"><a href="/site-directory/city-jobs.htm" target="_top" data-ajax="false"
+									   class="minor">Jobs by City</a></li>
+			</ul>
+		</div>
+		<p class="copyright minor"> Copyright © 2008–2014, Glassdoor. Glassdoor ® is a registered trademark of
+			Glassdoor, Inc. </p></div>
+	<a id="PageInfoBtn" onclick="return GD.debug.showPageInfoPopup()"> <span class="txtShadowWhite">Page Info</span>
+	</a></footer>
+<div id="PageInfo" data-role="collapsible" data-mini="true" data-iconpos="right" data-icon="info"
+	 data-collapsed="true" data-theme="c" data-content-theme="c" class="pageInfo structural notranslate"><h3>page
+	info</h3>
+	<ul data-role="listview" data-theme="g">
+		<li><label> Host name </label>
+
+			<p> JoelB-1137.local </p></li>
+		<li><label> Revision </label>
+
+			<p> Last Changed Rev: 122388 Last Changed Date: 2014-10-21 21:47:21 -0700 (Tue, 21 Oct 2014) </p></li>
+		<li><label> Canonical URL </label>
+
+			<p class="breakWords"> http://www.glassdoor.com/Top-25-Oddball-Interview-Questions-LST_KQ0,34.htm </p>
+		</li>
+		<li><label> Google Analytics ID </label>
+
+			<p class="breakWords"></p></li>
+		<li><label> Web Analytics Page URL </label>
+
+			<p class="webAnalyticsPageList breakWords">/lists/oddball-interview-questions/all</p></li>
+		<li><label> Web Analytics Segment </label>
+
+			<p><span class="none">none</span></p></li>
+		<li><label> Web Analytics Goal </label>
+
+			<p class="webAnalyticsGoalList breakWords"><span class="none">none</span></p></li>
+		<li><label> Web Analytics Custom Vars </label>
+
+			<p class="webAnalyticsCustomVars breakWords"><span class="none">none</span><br>(4) GDSegment =
+				"Job-Searcher" (visitor scope)<br>(11) User Reg Month = "2013-04" (page scope)</p></li>
+		<li><label> Web Analytics Page Events </label>
+
+			<p class="webAnalyticsEventList breakWords"><span class="none">none</span></p></li>
+		<li><label> Web Analytics Domain Name </label>
+
+			<p class="webAnalyticsDomainName breakWords"><span class="none">none</span></p></li>
+		<li><label> Ad Segments </label>
+
+			<p><span class="adSegmentsList"> </span></p></li>
+		<li><label> Google Adslots </label>
+
+			<p class="gamAds breakWords"><span> lists-oddball-interview-questions_300x250_right, lists-oddball-interview-questions_300x250_right_bf, </span>
+			</p></li>
+		<li><label> Google Targeted Ad Attrs </label>
+
+			<p class="gamTargetingAttrs breakWords"><span>none</span></p></li>
+		<li><label> User </label>
+
+			<p class="breakWords"> joel.berghoff@glassdoor.com </p></li>
+		<li><label> GeoIP country </label>
+
+			<p><span class="none">none</span></p></li>
+		<li><label> Universal Cookie </label>
+
+			<p class="breakWords"> {"js":true, "jsTrtmts":{"ESR":"2,SRXXBLXX,2,BL02", "SR":"1,SRXXBLXX,1,BL01",
+				"FJ":"3,SRXXBLXX,3,BL03"}, "uid":18981686, "fbRemember":false, "cookieMsg":true,
+				"alternateLanguageMsg":false} </p></li>
+		<li class="jqmCachedPagesMax"><label> Max. allowed pages in Cache </label>
+
+			<p class="count"></p></li>
+		<li class="jqmCachedPages"><label> Pages in Cache </label>
+
+			<p class="cachedPages"><span class="none">none</span></p></li>
+		<li><label> JQuery version </label>
+
+			<p class="jqueryVersion">1.10.2</p></li>
+		<li class="jqueryMobileVersion"><label> JQuery Mobile version </label>
+
+			<p class="versionNum"><span class="none">none</span></p>
+			<script>
+				if (jQuery && jQuery.mobile && jQuery.mobile.version) {
+					var $versionSection = $('.pageInfo .jqueryMobileVersion');
+
+					$('.versionNum', $versionSection).html(jQuery.mobile.version);
+				}
+			</script>
+		</li>
+	</ul>
+</div>
+<div class="hidden"></div>
+<script src="/static/js/i18n/gd-i18n.js?v=b405d2gd2"></script>
+<script src="/static/js/i18n/bundles/core.js?v=661508ker"></script>
+<script src="/static/js/i18n/bundles/core-fr-FR.js?v=117156i81"></script>
+<script src="/static/js/i18n/bundles/employerCenter.js?v=cbeaaa46h"></script>
+<script src="/static/js/i18n/bundles/employerCenter-fr-FR.js?v=ff904a3io"></script>
+<script src="/static/js/i18n/bundles/freeEmployerAccount.js?v=a48cc21fm"></script>
+<script src="/static/js/i18n/bundles/freeEmployerAccount-fr-FR.js?v=6b02c367"></script>
+<script src="/static/js/i18n/bundles/selfServiceJobPosting.js?v=df33841gn"></script>
+<script src="/static/js/i18n/bundles/selfServiceJobPosting-fr-FR.js?v=f8ad639x"></script>
+<script src="/static/js/i18n/globalize/globalize.js?v=33e61az9u"></script>
+<script src="/static/js/i18n/globalize/cultures/globalize.culture.en-US.js?v=1ec612kx"></script>
+<script src="/static/js/i18n/globalize/cultures/globalize.culture.fr.js?v=50cdc91fl"></script>
+<script src="/static/js/jquery/plugins/autogrow/jquery.autogrow-1.3.js?v=8c79ff7sm"></script>
+<script src="/static/js/jquery/plugins/comments/jquery.comments.js?v=f20fd818i"></script>
+<script src="/static/js/jquery/plugins/cookies/jquery.cookies.2.2.0.min.js?v=10fdbf48o"></script>
+<script src="/static/js/jquery/plugins/debounce/debounce.js?v=79d9c528l"></script>
+<script src="/static/js/jquery/plugins/glassdoor/jquery.glassdoor-misc.js?v=c331a23a6"></script>
+<script src="/static/js/vendor/simpleStorage/simpleStorage-0.1.2.js?v=21b6a48a0"></script>
+<script src="/static/js/jquery/plugins/lazyload/jquery.lazyload-1.9.5.js?v=4ed3066zd"></script>
+<script src="/static/js/jquery/plugins/magnific-popup/jquery.magnific-popup.js?v=245519ze9"></script>
+<script src="/static/js/jquery/plugins/selectBoxIt/jquery.selectBoxIt.js?v=4e374c2ah3"></script>
+<script src="/static/js/jquery/plugins/tooltip/tooltip.js?v=17d1f230t"></script>
+<script src="/static/js/shims/placeholder/placeholder.js?v=d5521a32w"></script>
+<script src="/static/js/jquery/plugins/smartbanner/jquery.smartbanner.js?v=7a1fddb15"></script>
+<script src="/static/js/jquery/plugins/truncatethis/jquery.truncatethis.js?v=0eb12e3eo"></script>
+<script src="/static/js/util/md5.js?v=11cbab5jn"></script>
+<script src="/static/js/lib/gd-ads.js?v=4d9e31ebq"></script>
+<script src="/static/js/components/btn.js?v=e632db5ol"></script>
+<script src="/static/js/components/btn-follow.js?v=21a6094h3"></script>
+<script src="/static/js/components/ratings.js?v=b8916a3cm"></script>
+<script src="/static/js/lib/gd-ads-flex.js?v=a725fc23k"></script>
+<script src="/static/js/lib/gd-ads-slots.js?v=40b0c41gr"></script>
+<script src="/static/js/lib/gd-ads-targeting.js?v=22d8965de"></script>
+<script src="/static/js/lib/gd-ac.js?v=647df779g"></script>
+<script src="/static/js/lib/gd-ac-emp.js?v=f53f0d3p5"></script>
+<script src="/static/js/lib/gd-ac-loc.js?v=47dc28708"></script>
+<script src="/static/js/lib/gd-ac-misc.js?v=992a3fnhq"></script>
+<script src="/static/js/lib/gd-augments.js?v=ce7de4oh5"></script>
+<script src="/static/js/lib/gd-augments-context-help.js?v=c18bb858n"></script>
+<script src="/static/js/lib/gd-debug.js?v=1ecb131p6"></script>
+<script src="/static/js/lib/gd-dialog.js?v=589e9fmk2"></script>
+<script src="/static/js/lib/gd-effects.js?v=ed5888926"></script>
+<script src="/static/js/lib/gd-flex-dialogs.js?v=0fedb3213"></script>
+<script src="/static/js/lib/gd-links.js?v=8edd0734d"></script>
+<script src="/static/js/lib/gd-lazyload.js?v=a310961q6"></script>
+<script src="/static/js/lib/gd-site.js?v=0132bd9cy"></script>
+<script src="/static/js/lib/gd-site-bluebar.js?v=3c61ac2pg"></script>
+<script src="/static/js/lib/gd-site-cobrand.js?v=0765ad1bm"></script>
+<script src="/static/js/lib/gd-site-fb-login.js?v=e551fd31l"></script>
+<script src="/static/js/lib/gd-site-popup.js?v=b7480d400"></script>
+<script src="/static/js/lib/gd-site-flex-dialogs.js?v=5b064d2ob"></script>
+<script src="/static/js/lib/gd-site-hdr-dropdown.js?v=f2ab385q8"></script>
+<script src="/static/js/lib/gd-site-init.js?v=138b31aww"></script>
+<script src="/static/js/lib/gd-site-ipad.js?v=d11104342"></script>
+<script src="/static/js/lib/gd-site-signin.js?v=3e44299nq"></script>
+<script src="/static/js/lib/gd-site-srch.js?v=f9bfbfoxt"></script>
+<script src="/static/js/lib/gd-srch.js?v=523c484ud"></script>
+<script src="/static/js/lib/gd-srch-common.js?v=72899d8ws"></script>
+<script src="/static/js/lib/gd-storage.js?v=de974087v"></script>
+<script src="/static/js/lib/gd-native-app-promo.js?v=234a0e2mn"></script>
+<script src="/static/js/lib/gd-tags.js?v=d89ca0x3j"></script>
+<script src="/static/js/lib/gd-tags-social-sharing.js?v=3d532e7jn"></script>
+<script src="/static/js/lib/gd-util-arrays.js?v=af41952fz"></script>
+<script src="/static/js/lib/gd-util-events.js?v=cb08614ju"></script>
+<script src="/static/js/lib/gd-util-strings.js?v=0606378lx"></script>
+<script src="/static/js/lib/gd-util-windows.js?v=d281043sv"></script>
+<script src="/static/js/lib/gd-tags-common.js?v=b6af693v0"></script>
+<script src="/static/js/externalApis/marketoEvents.js?v=fcccd42sm"></script>
+<script src="/static/js/ui/gd-jquery-jobalert.js?v=7bb2ab1o05"></script>
+<script src="/static/js/ui/gd-jquery-loginmodule.js?v=0d49efqsc"></script>
+<script src="/static/js/ui/gd-jquery-loginpopup.js?v=1956dd42n"></script>
+<script src="/static/js/ui/gd-jquery-popup.js?v=a8782c20j"></script>
+<script src="/static/js/ui/gd-selectify.js?v=de639637e"></script>
+<script src="/static/js/ui/gd-jquery-tabs.js?v=3645eb606"></script>
+<script src="/static/js/ui/gd-jquery-togglebtn.js?v=e7fc335kp"></script>
+<script src="/static/js/ui/gd-jquery-overlay-box.js?v=f072506d4"></script>
+<script src="/static/js/externalApis/fbApis.js?v=62348fh6z"></script>
+<script src="/static/js/externalApis/fbUtils.js?v=195110c7s"></script>
+<script src="/static/js/externalApis/gplusApis.js?v=0a193842g"></script>
+<script src="/static/js/modules/app-promo-modal.js?v=6215bf5fd"></script>
+<script src="/static/js/modules/cookie-notification-bar.js?v=5fefc6z9"></script>
+<script src="/static/js/modules/feature-link-slider.js?v=2d90da3o8"></script>
+<script src="/static/js/modules/slide-widget.js?v=a296b82nf"></script>
+<script src="/static/js/modules/smart-banner.js?v=3319f138o"></script>
+<script src="/static/js/components/alternateLanguageBar.js?v=8d3af2159"></script>
+<script src="/static/js/common/newsFeed.js?v=b1a74af0p"></script>
+<script src="/static/js/components/btnset.js?v=c8e91855p"></script>
+<script src="/static/js/components/btn-follow.js?v=21a6094h3"></script>
+<script src="/static/js/sections/staticList.js?v=1122bb5zk"></script>
+<script src="/static/js/jquery/plugins/fitvids/jquery.fitvids.js?v=71cdd9259"></script>
+<script src="/static/js/jquery/plugins/flexslider-2.2/jquery.flexslider.js?v=38b4d2141x"></script>
+<script src="/static/js/ui/gd-jquery-carousel.js?v=a022e757w"></script>
+<script>
+	(function () {
+		var po = document.createElement('script');
+		po.type = 'text/javascript';
+		po.async = true;
+		po.src = 'https://apis.google.com/js/plusone.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(po, s);
+	})();
+</script>
+<div id="fb-root" class=" fb_reset">
+	<div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+		<div></div>
+	</div>
+	<div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+		<div>
+			<iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no"
+					id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame"
+					tabindex="-1"
+					src="http://static.ak.facebook.com/connect/xd_arbiter/2_ZudbRXWRs.js?version=41#channel=f2b42c1a0&amp;origin=http%3A%2F%2Flocalhost%3A8080"
+					style="border: none;"></iframe>
+			<iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no"
+					id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame"
+					tabindex="-1"
+					src="https://s-static.ak.facebook.com/connect/xd_arbiter/2_ZudbRXWRs.js?version=41#channel=f2b42c1a0&amp;origin=http%3A%2F%2Flocalhost%3A8080"
+					style="border: none;"></iframe>
+		</div>
+	</div>
+</div>
+<script>
+	(function () {
+		var po = document.createElement('script');
+		po.type = 'text/javascript';
+		po.async = true;
+		po.appendChild(document.createTextNode("lang: en-US"));
+		po.src = '//platform.linkedin.com/in.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(po, s);
+	})();
+</script>
+<script>
+	(function () {
+		var po = document.createElement('script');
+		po.type = 'text/javascript';
+		po.async = true;
+		po.id = 'twitter-wjs';
+		po.src = '//platform.twitter.com/widgets.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(po, s);
+	})();
+</script>
+<noscript> &lt;div style="display: none;"&gt;&lt;img src="//pixel.quantserve.com/pixel/p-77hG-A4X4ka9Q.gif"
+	height="1" width="1" alt="Quantcast"/&gt;&lt;/div&gt; </noscript>
+<script>
+	try {
+		GD.runAfterLoad(function () {
+			GD.dom.execDeferredScripts();
+		});
+	}
+	catch (e) {
+		Logger.error("Executing deferred scripts failed. (" + e + ")");
+	}
+</script>
+
+<iframe name="oauth2relay427991433" id="oauth2relay427991433"
+		src="https://accounts.google.com/o/oauth2/postmessageRelay?parent=http%3A%2F%2Flocalhost%3A8080#rpctoken=1454947250&amp;forcesecure=1"
+		tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe>
+<div id="window-resizer-tooltip" style="display: none;"><a href="#" title="Edit settings"
+														   style="background-image: url(chrome-extension://kkelicaakdanhinjdeammmilcgefonfh/images/icon_19.png);"></a><span
+		class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1440</span> x <span
+		class="tooltipHeight" id="winHeight">874</span><br><span class="tooltipTitle">Viewport size: </span><span
+		class="tooltipWidth" id="vpWidth">1440</span> x <span class="tooltipHeight" id="vpHeight">308</span></div>
+<script id="hiddenlpsubmitdiv" style="display: none;"></script>
+
+<iframe src="http://tpc.googlesyndication.com/safeframe/1-0-0/html/container.html"
+		style="visibility: hidden; display: none;"></iframe>
+<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="SrchKey_ACPopup"
+	tabindex="0" style="display: none;"></ul>
+<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all location-ac-results"
+	id="LocText_ACPopup" tabindex="0" style="display: none;"></ul>
 </body>
 
-<template name="hello">
-  <button>Click Me!</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="myList">
+
 </template>
