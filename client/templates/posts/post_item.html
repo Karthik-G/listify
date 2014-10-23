@@ -1,19 +1,23 @@
 <template name="postItem">
 	<li>
-		<div class="num"><span>#.</span></div>
-		<div class="q">
-			<div class="txt"><strong><a href="{{url}}">{{title}}</a> - {{domain}}</strong></div>
+		<div>
+			<div class="margRt ib middle pageLogo">
+				<a href="{{url}}" title="Google Salaries">
+					<span class="sqLogo tighten smSqLogo logo">
+						<img src="http://media.glassdoor.com/sqls/9079/google-squarelogo-1411597920988.png" data-original="http://media.glassdoor.com/sqls/9079/google-squarelogo-1411597920988.png" class="notranslate_alt notranslate_title lazy lazyLoaded" data-retina-ok="true" alt="" title="" style="opacity: 1;">
+					</span>
+				</a>
+			</div>
+			<div class="ib middle pageText">
+				<div class="pageTitle">
+					<a href="{{url}}" title="Google Overview">{{title}}</a>
+				</div>
+				<div class="pageInfo">
+					<span class="minor">
+						<a class="companyReviews" href="{{url}}">2,580 Google reviews. A free inside look at company reviews and salaries posted anonymously by employees.</a>
+					</span>
+				</div>
+			</div>
 		</div>
-		<div class="logo"><a
-				href="/Overview/Working-at-The-Zappos-Family-EI_IE19906.11,28.htm"
-				class="sqLogoLink"> <span class="sqLogo tighten smSqLogo"> <img
-				src="http://media.glassdoor.com/sqlm/19906/the-zappos-family-squarelogo-1410311872359.png"
-				data-original="http://media.glassdoor.com/sqls/19906/the-zappos-family-squarelogo-1410311872359.png"
-				data-original-2x="http://media.glassdoor.com/sqlm/19906/the-zappos-family-squarelogo-1410311872359.png"
-				class="notranslate_alt notranslate_title lazy lazyLoaded"
-				data-retina-ok="true"
-				alt="From a question asked at The Zappos Family"
-				title="From a question asked at The Zappos Family"
-				style="opacity: 1;"> </span> </a></div>
 	</li>
 </template>

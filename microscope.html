@@ -2,6 +2,7 @@
 	<title>microscope</title>
 	<link href='http://glassdoor.com/static/css/flex/gd-core.css' rel='stylesheet' type='text/css' media='all'/>
 	<link href='http://glassdoor.com/static/css/gd-static-list.css' rel='stylesheet' type='text/css' media='all'/>
+	<link href='http://static.glassdoor.com/static/css/gd-ei-interviews.css' rel='stylesheet' type='text/css' media='all'/>
 </head>
 
 <body>
@@ -206,88 +207,74 @@
 <div id="Lists">
 <div id="Oddball">
 <div class="flex-aside">
+
+<style>
+	/* I'll move this once I figure out how css works in meteor */
+	h1 {
+		line-height: 22px;
+	}
+
+	.pageText {
+		max-width: 80%;
+	}
+
+	.voteArrowContainer .voteArrow {
+		padding: 4px 4px 4px 5px;
+	}
+
+	.listOfPills li {
+		padding: 4px 7px;
+	}
+</style>
+
 <article id="MainCol">
-{{> myList}}
-<div id="SocialSharingBtns" class="floating hidden loaded"
-	 style="opacity: 1; display: block;">
-	<div class="contents">
-		<div class="twitterFacade facade"></div>
-		<div class="fbLikeFacade facade"></div>
-		<div class="linkedInFacade facade"></div>
-		<div class="gPlusFacade facade"></div>
-		<div class="twitterButton">
-			<iframe id="twitter-widget-0" scrolling="no" frameborder="0"
-					allowtransparency="true"
-					src="http://platform.twitter.com/widgets/tweet_button.d4db41a5a14a4516e6d4ecf6250c7419.en.html#_=1414010931949&amp;count=horizontal&amp;dnt=true&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Flocalhost%3A8080%2FTop-25-Oddball-Interview-Questions-LST_KQ0%2C34.htm&amp;size=m&amp;text=Top%2025%20Oddball%20Interview%20Questions%20%7C%20Glassdoor&amp;url=http%3A%2F%2Flocalhost%3A8080%2FTop-25-Oddball-Interview-Questions-LST_KQ0%2C34.htm"
-					class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal"
-					title="Twitter Tweet Button" data-twttr-rendered="true"
-					style="width: 109px; height: 20px;"></iframe>
-		</div>
-		<div class="fbLikeButton">
-			<fb:like href="" layout="button_count" show_faces="false" font="arial"
-					 data-share="false" send="true" class=" fb_iframe_widget"
-					 fb-xfbml-state="rendered"
-					 fb-iframe-plugin-query="app_id=159934710737737&amp;font=arial&amp;href=http%3A%2F%2Flocalhost%3A8080%2FTop-25-Oddball-Interview-Questions-LST_KQ0%2C34.htm&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;send=true&amp;share=false&amp;show_faces=false">
-													<span style="vertical-align: bottom; width: 77px; height: 20px;"><iframe
-															name="f3802589e" width="1000px" height="1000px"
-															frameborder="0" allowtransparency="true" scrolling="no"
-															title="fb:like Facebook Social Plugin"
-															src="http://www.facebook.com/plugins/like.php?app_id=159934710737737&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2F2_ZudbRXWRs.js%3Fversion%3D41%23cb%3Df109d4b0d%26domain%3Dlocalhost%26origin%3Dhttp%253A%252F%252Flocalhost%253A8080%252Ff2b42c1a0%26relation%3Dparent.parent&amp;font=arial&amp;href=http%3A%2F%2Flocalhost%3A8080%2FTop-25-Oddball-Interview-Questions-LST_KQ0%2C34.htm&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;send=true&amp;share=false&amp;show_faces=false"
-															style="border: none; visibility: visible; width: 77px; height: 20px;"
-															class=""></iframe></span></fb:like>
-		</div>
-		<div class="linkedInButton"><span class="IN-widget"
-										  style="line-height: 1; vertical-align: baseline; display: inline-block; text-align: center;"><span
-				style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span
-				id="li_ui_li_gen_1414010932138_0"><a
-				id="li_ui_li_gen_1414010932138_0-link"
-				href="javascript:void(0);"><span
-				id="li_ui_li_gen_1414010932138_0-logo">in</span><span
-				id="li_ui_li_gen_1414010932138_0-title"><span
-				id="li_ui_li_gen_1414010932138_0-mark"></span><span
-				id="li_ui_li_gen_1414010932138_0-title-text">Share</span></span></a></span></span><span
-				style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span
-				id="li_ui_li_gen_1414010932146_1-container"
-				class="IN-right IN-hidden"><span id="li_ui_li_gen_1414010932146_1"
-												 class="IN-right"><span
-				id="li_ui_li_gen_1414010932146_1-inner" class="IN-right"><span
-				id="li_ui_li_gen_1414010932146_1-content" class="IN-right">0</span></span></span></span></span></span>
-			<script type="IN/Share+init" data-counter="right" data-url=""
-					data-onsuccess="linkedInCallbackGA"></script>
-		</div>
-		<div class="gPlusButton">
-			<div id="___plusone_0"
-				 style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 106px; height: 24px; background: transparent;">
-				<iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0"
-						scrolling="no"
-						style="position: static; top: 0px; width: 106px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;"
-						tabindex="0" vspace="0" width="100%" id="I0_1414010931916"
-						name="I0_1414010931916"
-						src="https://apis.google.com/u/0/se/0/_/+1/fastbutton?usegapi=1&amp;size=standard&amp;gpluscallbackga=&amp;origin=http%3A%2F%2Flocalhost%3A8080&amp;url=http%3A%2F%2Flocalhost%3A8080%2FTop-25-Oddball-Interview-Questions-LST_KQ0%2C34.htm&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en.dXaY4wFPegI.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Ft%3Dzcms%2Frs%3DAGLTcCORdZkJIIQQ1zpx2loGrb-KTPf3oA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I0_1414010931916&amp;parent=http%3A%2F%2Flocalhost%3A8080&amp;pfname=&amp;rpctoken=73083561"
-						data-gapiattached="true" title="+1"></iframe>
+	{{> myList}}
+
+	<div class="module">
+		<div class="section cf">
+			<div class="top padRt padBot ib">
+				<span id="helpful_USER_RESPONSE_316286" class="helpfulQuery">
+					<div id="helpfulSummary_USER_RESPONSE_316286" class="voteArrowContainer">
+						<div class="voteArrow voteHelpfulArrow" onclick="return GD.helpful.vote(316286, 'USER_RESPONSE', true, true);">▲</div>
+						<div id="helpfulCount_USER_RESPONSE_316286" class="voteHelpfulCount padVertSm h2 noMargVert center notranslate">0</div>
+						<div class="voteArrow voteNotHelpfulArrow" onclick="return GD.helpful.vote(316286, 'USER_RESPONSE', false, true);">▼</div>
+					</div>
+				</span>
+			</div>
+			<div class="ib">
+				<h1 class="tightVert">List Title</h1>
+				<p class="margVertSm">My list has some really interesting stuff. Check it out at your leisure.</p>
+				<ul class="listOfPills"><li>tag 1</li><li>tag 2</li></ul>
 			</div>
 		</div>
-	</div>
-</div>
-<div class="module">
-<div class="statLstHdr section cf">
-	<div class="hdr">
-		<div class="content"><h1 class="strong"> My List</h1></div>
-		<div class="spacer"><i></i></div>
-	</div>
-</div>
 
-{{> postsList}}
-</div>
+		{{> postsList}}
+	</div>
 </article>
-<aside>
-	<div class="bucket workInHRFOrEmployerInfo"><h2 class="bucketTitle"> Work in
-		HR? </h2>
 
-		<div class="bucketBody cf"><p class="tightTop"> See who's viewing your company's
-			profile and get started managing your brand on Glassdoor. Sign up for a <a
-					href="http://www.glassdoor.com/partners/account/create.htm?Source=GDList_campaign"
-					target="_blank">free employer account</a>. </p></div>
+<aside>
+	<div class="bucket workInHRFOrEmployerInfo">
+		<h2 class="bucketTitle"> Discuss this list: </h2>
+
+		<div class="bucketBody cf">
+			<div id="disqus_thread"></div>
+			<script type="text/javascript">
+				var enableDisqus = false;
+
+				/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+				var disqus_shortname = 'gdlistify'; // required: replace example with your forum shortname
+
+				/* * * DON'T EDIT BELOW THIS LINE * * */
+				(function() {
+					var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+					dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+					if(enableDisqus)
+						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+				})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+		</div>
 	</div>
 </aside>
 </div>
