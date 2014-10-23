@@ -3,6 +3,7 @@
 	<link href='http://glassdoor.com/static/css/flex/gd-core.css' rel='stylesheet' type='text/css' media='all'/>
 	<link href='http://glassdoor.com/static/css/gd-static-list.css' rel='stylesheet' type='text/css' media='all'/>
 	<link href='http://static.glassdoor.com/static/css/gd-ei-interviews.css' rel='stylesheet' type='text/css' media='all'/>
+	<script src="http://www.glassdoor.com/static/js/lib/gd-dom.js?v=1ecb131p6"></script>
 </head>
 
 <body>
@@ -215,7 +216,7 @@
 	}
 
 	.pageText {
-		max-width: 80%;
+		max-width: 70%;
 	}
 
 	.voteArrowContainer .voteArrow {
@@ -224,6 +225,26 @@
 
 	.listOfPills li {
 		padding: 4px 7px;
+	}
+
+	.pageLogo {
+		margin: 0 14px;
+	}
+
+	.listOfLists .pageLogo {
+		margin: 0 14px 0 0;
+	}
+
+	#Oddball .listOfLists ol.questionList li {
+		background-color: transparent;
+	}
+
+	#Oddball .listOfLists ol.questionList li > div {
+		border-top: 1px solid #ccc;
+	}
+
+	#Oddball .listOfLists ol.questionList li:first-child > div {
+		border-top: none;
 	}
 </style>
 
@@ -253,19 +274,30 @@
 </article>
 
 <aside>
-	<div class="bucket workInHRFOrEmployerInfo">
+	<div class="bucket listOfLists">
+		<h2 class="bucketTitle"> User Lists: </h2>
+
+		<div class="bucketBody cf">
+			{{> postsList}}
+		</div>
+	</div>
+
+	<div class="bucket listDiscussion">
 		<h2 class="bucketTitle"> Discuss this list: </h2>
 
 		<div class="bucketBody cf">
 			<div id="disqus_thread"></div>
 			<script type="text/javascript">
-				var enableDisqus = false;
 
 				/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 				var disqus_shortname = 'gdlistify'; // required: replace example with your forum shortname
 
 				/* * * DON'T EDIT BELOW THIS LINE * * */
 				(function() {
+					// Disqus can be disabled with query param disqus=false
+					var enableDisqus = GD.dom.getQueryString("disqus");
+					enableDisqus = !enableDisqus || (enableDisqus == 'true')
+
 					var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 					dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 					if(enableDisqus)
@@ -280,11 +312,6 @@
 </div>
 </div>
 </div>
-<script>
-	GD.runAfterLoad(function () {
-		GD.staticList.initOddball();
-	});
-</script>
 </div>
 <div id="InterstitialDisplay" class="hidden interstitial"><i class="spinner"></i>
 
@@ -463,8 +490,7 @@
 		</div>
 		<p class="copyright minor"> Copyright © 2008–2014, Glassdoor. Glassdoor ® is a registered trademark of
 			Glassdoor, Inc. </p></div>
-	<a id="PageInfoBtn" onclick="return GD.debug.showPageInfoPopup()"> <span class="txtShadowWhite">Page Info</span>
-	</a></footer>
+	</footer>
 <div id="PageInfo" data-role="collapsible" data-mini="true" data-iconpos="right" data-icon="info"
 	 data-collapsed="true" data-theme="c" data-content-theme="c" class="pageInfo structural notranslate"><h3>page
 	info</h3>
@@ -545,98 +571,98 @@
 	</ul>
 </div>
 <div class="hidden"></div>
-<script src="/static/js/i18n/gd-i18n.js?v=b405d2gd2"></script>
-<script src="/static/js/i18n/bundles/core.js?v=661508ker"></script>
-<script src="/static/js/i18n/bundles/core-fr-FR.js?v=117156i81"></script>
-<script src="/static/js/i18n/bundles/employerCenter.js?v=cbeaaa46h"></script>
-<script src="/static/js/i18n/bundles/employerCenter-fr-FR.js?v=ff904a3io"></script>
-<script src="/static/js/i18n/bundles/freeEmployerAccount.js?v=a48cc21fm"></script>
-<script src="/static/js/i18n/bundles/freeEmployerAccount-fr-FR.js?v=6b02c367"></script>
-<script src="/static/js/i18n/bundles/selfServiceJobPosting.js?v=df33841gn"></script>
-<script src="/static/js/i18n/bundles/selfServiceJobPosting-fr-FR.js?v=f8ad639x"></script>
-<script src="/static/js/i18n/globalize/globalize.js?v=33e61az9u"></script>
-<script src="/static/js/i18n/globalize/cultures/globalize.culture.en-US.js?v=1ec612kx"></script>
-<script src="/static/js/i18n/globalize/cultures/globalize.culture.fr.js?v=50cdc91fl"></script>
-<script src="/static/js/jquery/plugins/autogrow/jquery.autogrow-1.3.js?v=8c79ff7sm"></script>
-<script src="/static/js/jquery/plugins/comments/jquery.comments.js?v=f20fd818i"></script>
-<script src="/static/js/jquery/plugins/cookies/jquery.cookies.2.2.0.min.js?v=10fdbf48o"></script>
-<script src="/static/js/jquery/plugins/debounce/debounce.js?v=79d9c528l"></script>
-<script src="/static/js/jquery/plugins/glassdoor/jquery.glassdoor-misc.js?v=c331a23a6"></script>
-<script src="/static/js/vendor/simpleStorage/simpleStorage-0.1.2.js?v=21b6a48a0"></script>
-<script src="/static/js/jquery/plugins/lazyload/jquery.lazyload-1.9.5.js?v=4ed3066zd"></script>
-<script src="/static/js/jquery/plugins/magnific-popup/jquery.magnific-popup.js?v=245519ze9"></script>
-<script src="/static/js/jquery/plugins/selectBoxIt/jquery.selectBoxIt.js?v=4e374c2ah3"></script>
-<script src="/static/js/jquery/plugins/tooltip/tooltip.js?v=17d1f230t"></script>
-<script src="/static/js/shims/placeholder/placeholder.js?v=d5521a32w"></script>
-<script src="/static/js/jquery/plugins/smartbanner/jquery.smartbanner.js?v=7a1fddb15"></script>
-<script src="/static/js/jquery/plugins/truncatethis/jquery.truncatethis.js?v=0eb12e3eo"></script>
-<script src="/static/js/util/md5.js?v=11cbab5jn"></script>
-<script src="/static/js/lib/gd-ads.js?v=4d9e31ebq"></script>
-<script src="/static/js/components/btn.js?v=e632db5ol"></script>
-<script src="/static/js/components/btn-follow.js?v=21a6094h3"></script>
-<script src="/static/js/components/ratings.js?v=b8916a3cm"></script>
-<script src="/static/js/lib/gd-ads-flex.js?v=a725fc23k"></script>
-<script src="/static/js/lib/gd-ads-slots.js?v=40b0c41gr"></script>
-<script src="/static/js/lib/gd-ads-targeting.js?v=22d8965de"></script>
-<script src="/static/js/lib/gd-ac.js?v=647df779g"></script>
-<script src="/static/js/lib/gd-ac-emp.js?v=f53f0d3p5"></script>
-<script src="/static/js/lib/gd-ac-loc.js?v=47dc28708"></script>
-<script src="/static/js/lib/gd-ac-misc.js?v=992a3fnhq"></script>
-<script src="/static/js/lib/gd-augments.js?v=ce7de4oh5"></script>
-<script src="/static/js/lib/gd-augments-context-help.js?v=c18bb858n"></script>
-<script src="/static/js/lib/gd-debug.js?v=1ecb131p6"></script>
-<script src="/static/js/lib/gd-dialog.js?v=589e9fmk2"></script>
-<script src="/static/js/lib/gd-effects.js?v=ed5888926"></script>
-<script src="/static/js/lib/gd-flex-dialogs.js?v=0fedb3213"></script>
-<script src="/static/js/lib/gd-links.js?v=8edd0734d"></script>
-<script src="/static/js/lib/gd-lazyload.js?v=a310961q6"></script>
-<script src="/static/js/lib/gd-site.js?v=0132bd9cy"></script>
-<script src="/static/js/lib/gd-site-bluebar.js?v=3c61ac2pg"></script>
-<script src="/static/js/lib/gd-site-cobrand.js?v=0765ad1bm"></script>
-<script src="/static/js/lib/gd-site-fb-login.js?v=e551fd31l"></script>
-<script src="/static/js/lib/gd-site-popup.js?v=b7480d400"></script>
-<script src="/static/js/lib/gd-site-flex-dialogs.js?v=5b064d2ob"></script>
-<script src="/static/js/lib/gd-site-hdr-dropdown.js?v=f2ab385q8"></script>
-<script src="/static/js/lib/gd-site-init.js?v=138b31aww"></script>
-<script src="/static/js/lib/gd-site-ipad.js?v=d11104342"></script>
-<script src="/static/js/lib/gd-site-signin.js?v=3e44299nq"></script>
-<script src="/static/js/lib/gd-site-srch.js?v=f9bfbfoxt"></script>
-<script src="/static/js/lib/gd-srch.js?v=523c484ud"></script>
-<script src="/static/js/lib/gd-srch-common.js?v=72899d8ws"></script>
-<script src="/static/js/lib/gd-storage.js?v=de974087v"></script>
-<script src="/static/js/lib/gd-native-app-promo.js?v=234a0e2mn"></script>
-<script src="/static/js/lib/gd-tags.js?v=d89ca0x3j"></script>
-<script src="/static/js/lib/gd-tags-social-sharing.js?v=3d532e7jn"></script>
-<script src="/static/js/lib/gd-util-arrays.js?v=af41952fz"></script>
-<script src="/static/js/lib/gd-util-events.js?v=cb08614ju"></script>
-<script src="/static/js/lib/gd-util-strings.js?v=0606378lx"></script>
-<script src="/static/js/lib/gd-util-windows.js?v=d281043sv"></script>
-<script src="/static/js/lib/gd-tags-common.js?v=b6af693v0"></script>
-<script src="/static/js/externalApis/marketoEvents.js?v=fcccd42sm"></script>
-<script src="/static/js/ui/gd-jquery-jobalert.js?v=7bb2ab1o05"></script>
-<script src="/static/js/ui/gd-jquery-loginmodule.js?v=0d49efqsc"></script>
-<script src="/static/js/ui/gd-jquery-loginpopup.js?v=1956dd42n"></script>
-<script src="/static/js/ui/gd-jquery-popup.js?v=a8782c20j"></script>
-<script src="/static/js/ui/gd-selectify.js?v=de639637e"></script>
-<script src="/static/js/ui/gd-jquery-tabs.js?v=3645eb606"></script>
-<script src="/static/js/ui/gd-jquery-togglebtn.js?v=e7fc335kp"></script>
-<script src="/static/js/ui/gd-jquery-overlay-box.js?v=f072506d4"></script>
-<script src="/static/js/externalApis/fbApis.js?v=62348fh6z"></script>
-<script src="/static/js/externalApis/fbUtils.js?v=195110c7s"></script>
-<script src="/static/js/externalApis/gplusApis.js?v=0a193842g"></script>
-<script src="/static/js/modules/app-promo-modal.js?v=6215bf5fd"></script>
-<script src="/static/js/modules/cookie-notification-bar.js?v=5fefc6z9"></script>
-<script src="/static/js/modules/feature-link-slider.js?v=2d90da3o8"></script>
-<script src="/static/js/modules/slide-widget.js?v=a296b82nf"></script>
-<script src="/static/js/modules/smart-banner.js?v=3319f138o"></script>
-<script src="/static/js/components/alternateLanguageBar.js?v=8d3af2159"></script>
-<script src="/static/js/common/newsFeed.js?v=b1a74af0p"></script>
-<script src="/static/js/components/btnset.js?v=c8e91855p"></script>
-<script src="/static/js/components/btn-follow.js?v=21a6094h3"></script>
-<script src="/static/js/sections/staticList.js?v=1122bb5zk"></script>
-<script src="/static/js/jquery/plugins/fitvids/jquery.fitvids.js?v=71cdd9259"></script>
-<script src="/static/js/jquery/plugins/flexslider-2.2/jquery.flexslider.js?v=38b4d2141x"></script>
-<script src="/static/js/ui/gd-jquery-carousel.js?v=a022e757w"></script>
+<script src="http://www.glassdoor.com/static/js/i18n/gd-i18n.js?v=b405d2gd2"></script>
+<script src="http://www.glassdoor.com/static/js/i18n/bundles/core.js?v=661508ker"></script>
+<script src="http://www.glassdoor.com/static/js/i18n/bundles/core-fr-FR.js?v=117156i81"></script>
+<script src="http://www.glassdoor.com/static/js/i18n/bundles/employerCenter.js?v=cbeaaa46h"></script>
+<script src="http://www.glassdoor.com/static/js/i18n/bundles/employerCenter-fr-FR.js?v=ff904a3io"></script>
+<script src="http://www.glassdoor.com/static/js/i18n/bundles/freeEmployerAccount.js?v=a48cc21fm"></script>
+<script src="http://www.glassdoor.com/static/js/i18n/bundles/freeEmployerAccount-fr-FR.js?v=6b02c367"></script>
+<script src="http://www.glassdoor.com/static/js/i18n/bundles/selfServiceJobPosting.js?v=df33841gn"></script>
+<script src="http://www.glassdoor.com/static/js/i18n/bundles/selfServiceJobPosting-fr-FR.js?v=f8ad639x"></script>
+<script src="http://www.glassdoor.com/static/js/i18n/globalize/globalize.js?v=33e61az9u"></script>
+<script src="http://www.glassdoor.com/static/js/i18n/globalize/cultures/globalize.culture.en-US.js?v=1ec612kx"></script>
+<script src="http://www.glassdoor.com/static/js/i18n/globalize/cultures/globalize.culture.fr.js?v=50cdc91fl"></script>
+<script src="http://www.glassdoor.com/static/js/jquery/plugins/autogrow/jquery.autogrow-1.3.js?v=8c79ff7sm"></script>
+<script src="http://www.glassdoor.com/static/js/jquery/plugins/comments/jquery.comments.js?v=f20fd818i"></script>
+<script src="http://www.glassdoor.com/static/js/jquery/plugins/cookies/jquery.cookies.2.2.0.min.js?v=10fdbf48o"></script>
+<script src="http://www.glassdoor.com/static/js/jquery/plugins/debounce/debounce.js?v=79d9c528l"></script>
+<script src="http://www.glassdoor.com/static/js/jquery/plugins/glassdoor/jquery.glassdoor-misc.js?v=c331a23a6"></script>
+<script src="http://www.glassdoor.com/static/js/vendor/simpleStorage/simpleStorage-0.1.2.js?v=21b6a48a0"></script>
+<script src="http://www.glassdoor.com/static/js/jquery/plugins/lazyload/jquery.lazyload-1.9.5.js?v=4ed3066zd"></script>
+<script src="http://www.glassdoor.com/static/js/jquery/plugins/magnific-popup/jquery.magnific-popup.js?v=245519ze9"></script>
+<script src="http://www.glassdoor.com/static/js/jquery/plugins/selectBoxIt/jquery.selectBoxIt.js?v=4e374c2ah3"></script>
+<script src="http://www.glassdoor.com/static/js/jquery/plugins/tooltip/tooltip.js?v=17d1f230t"></script>
+<script src="http://www.glassdoor.com/static/js/shims/placeholder/placeholder.js?v=d5521a32w"></script>
+<script src="http://www.glassdoor.com/static/js/jquery/plugins/smartbanner/jquery.smartbanner.js?v=7a1fddb15"></script>
+<script src="http://www.glassdoor.com/static/js/jquery/plugins/truncatethis/jquery.truncatethis.js?v=0eb12e3eo"></script>
+<script src="http://www.glassdoor.com/static/js/util/md5.js?v=11cbab5jn"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-ads.js?v=4d9e31ebq"></script>
+<script src="http://www.glassdoor.com/static/js/components/btn.js?v=e632db5ol"></script>
+<script src="http://www.glassdoor.com/static/js/components/btn-follow.js?v=21a6094h3"></script>
+<script src="http://www.glassdoor.com/static/js/components/ratings.js?v=b8916a3cm"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-ads-flex.js?v=a725fc23k"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-ads-slots.js?v=40b0c41gr"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-ads-targeting.js?v=22d8965de"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-ac.js?v=647df779g"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-ac-emp.js?v=f53f0d3p5"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-ac-loc.js?v=47dc28708"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-ac-misc.js?v=992a3fnhq"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-augments.js?v=ce7de4oh5"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-augments-context-help.js?v=c18bb858n"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-debug.js?v=1ecb131p6"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-dialog.js?v=589e9fmk2"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-effects.js?v=ed5888926"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-flex-dialogs.js?v=0fedb3213"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-links.js?v=8edd0734d"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-lazyload.js?v=a310961q6"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-site.js?v=0132bd9cy"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-site-bluebar.js?v=3c61ac2pg"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-site-cobrand.js?v=0765ad1bm"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-site-fb-login.js?v=e551fd31l"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-site-popup.js?v=b7480d400"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-site-flex-dialogs.js?v=5b064d2ob"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-site-hdr-dropdown.js?v=f2ab385q8"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-site-init.js?v=138b31aww"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-site-ipad.js?v=d11104342"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-site-signin.js?v=3e44299nq"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-site-srch.js?v=f9bfbfoxt"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-srch.js?v=523c484ud"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-srch-common.js?v=72899d8ws"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-storage.js?v=de974087v"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-native-app-promo.js?v=234a0e2mn"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-tags.js?v=d89ca0x3j"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-tags-social-sharing.js?v=3d532e7jn"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-util-arrays.js?v=af41952fz"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-util-events.js?v=cb08614ju"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-util-strings.js?v=0606378lx"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-util-windows.js?v=d281043sv"></script>
+<script src="http://www.glassdoor.com/static/js/lib/gd-tags-common.js?v=b6af693v0"></script>
+<script src="http://www.glassdoor.com/static/js/externalApis/marketoEvents.js?v=fcccd42sm"></script>
+<script src="http://www.glassdoor.com/static/js/ui/gd-jquery-jobalert.js?v=7bb2ab1o05"></script>
+<script src="http://www.glassdoor.com/static/js/ui/gd-jquery-loginmodule.js?v=0d49efqsc"></script>
+<script src="http://www.glassdoor.com/static/js/ui/gd-jquery-loginpopup.js?v=1956dd42n"></script>
+<script src="http://www.glassdoor.com/static/js/ui/gd-jquery-popup.js?v=a8782c20j"></script>
+<script src="http://www.glassdoor.com/static/js/ui/gd-selectify.js?v=de639637e"></script>
+<script src="http://www.glassdoor.com/static/js/ui/gd-jquery-tabs.js?v=3645eb606"></script>
+<script src="http://www.glassdoor.com/static/js/ui/gd-jquery-togglebtn.js?v=e7fc335kp"></script>
+<script src="http://www.glassdoor.com/static/js/ui/gd-jquery-overlay-box.js?v=f072506d4"></script>
+<script src="http://www.glassdoor.com/static/js/externalApis/fbApis.js?v=62348fh6z"></script>
+<script src="http://www.glassdoor.com/static/js/externalApis/fbUtils.js?v=195110c7s"></script>
+<script src="http://www.glassdoor.com/static/js/externalApis/gplusApis.js?v=0a193842g"></script>
+<script src="http://www.glassdoor.com/static/js/modules/app-promo-modal.js?v=6215bf5fd"></script>
+<script src="http://www.glassdoor.com/static/js/modules/cookie-notification-bar.js?v=5fefc6z9"></script>
+<script src="http://www.glassdoor.com/static/js/modules/feature-link-slider.js?v=2d90da3o8"></script>
+<script src="http://www.glassdoor.com/static/js/modules/slide-widget.js?v=a296b82nf"></script>
+<script src="http://www.glassdoor.com/static/js/modules/smart-banner.js?v=3319f138o"></script>
+<script src="http://www.glassdoor.com/static/js/components/alternateLanguageBar.js?v=8d3af2159"></script>
+<script src="http://www.glassdoor.com/static/js/common/newsFeed.js?v=b1a74af0p"></script>
+<script src="http://www.glassdoor.com/static/js/components/btnset.js?v=c8e91855p"></script>
+<script src="http://www.glassdoor.com/static/js/components/btn-follow.js?v=21a6094h3"></script>
+<script src="http://www.glassdoor.com/static/js/sectionshttp://www.glassdoor.com/staticList.js?v=1122bb5zk"></script>
+<script src="http://www.glassdoor.com/static/js/jquery/plugins/fitvids/jquery.fitvids.js?v=71cdd9259"></script>
+<script src="http://www.glassdoor.com/static/js/jquery/plugins/flexslider-2.2/jquery.flexslider.js?v=38b4d2141x"></script>
+<script src="http://www.glassdoor.com/static/js/ui/gd-jquery-carousel.js?v=a022e757w"></script>
 <script>
 	(function () {
 		var po = document.createElement('script');
@@ -690,16 +716,6 @@
 </script>
 <noscript> &lt;div style="display: none;"&gt;&lt;img src="//pixel.quantserve.com/pixel/p-77hG-A4X4ka9Q.gif"
 	height="1" width="1" alt="Quantcast"/&gt;&lt;/div&gt; </noscript>
-<script>
-	try {
-		GD.runAfterLoad(function () {
-			GD.dom.execDeferredScripts();
-		});
-	}
-	catch (e) {
-		Logger.error("Executing deferred scripts failed. (" + e + ")");
-	}
-</script>
 
 <iframe name="oauth2relay427991433" id="oauth2relay427991433"
 		src="https://accounts.google.com/o/oauth2/postmessageRelay?parent=http%3A%2F%2Flocalhost%3A8080#rpctoken=1454947250&amp;forcesecure=1"
